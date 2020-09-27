@@ -2,10 +2,10 @@
 Mysql-Replication Master-Master Master-Slave
 
 
-### Flush privileges
+#### Flush privileges
 
 
-#### mysql> FLUSH PRIVILEGES;
+``` mysql> FLUSH PRIVILEGES; ```
 
 when we grant some privileges for a user, running the command flush privileges will reloads the grant tables in the mysql database enabling the changes to take effect without reloading or restarting mysql service.
 
