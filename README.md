@@ -32,3 +32,15 @@ The command uses host cache tables, if maximum number of connections has been re
 
 The command closes and reopens all log files, if log files are to big and taking more time to load then you can run the command which will create an empty log file.
 
+
+#### Change user password
+
+``` mysql> ALTER USER 'username'@'%' IDENTIFIED BY 'New-Password-Here'; ```
+
+or 
+
+``` mysql> ALTER USER 'username'@'localhost' IDENTIFIED BY 'New-Password-Here'; ```
+
+and after 
+
+``` mysql> FLUSH PRIVILEGES;``` 
