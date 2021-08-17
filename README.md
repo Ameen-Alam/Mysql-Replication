@@ -44,3 +44,18 @@ or
 and after 
 
 ``` mysql> FLUSH PRIVILEGES;``` 
+
+
+#### How to change max_connections
+
+mysql> SET GLOBAL max_connections = 5000;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SHOW VARIABLES LIKE "max_connections";
++-----------------+-------+
+| Variable_name   | Value |
++-----------------+-------+
+| max_connections | 5000  |
++-----------------+-------+
+1 row in set (0.00 sec)
+
