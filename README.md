@@ -53,15 +53,40 @@ Query OK, 0 rows affected (0.00 sec)
 
 mysql> SHOW VARIABLES LIKE "max_connections";
 
-+-----------------+-------+
 
-| Variable_name   | Value |
+#### User/Grants in MySQL
 
-+-----------------+-------+
+mysql> select * from mysql.user;
 
-| max_connections | 5000  |
+mysql> SHOW GRANTS FOR 'techonthenet';
 
-+-----------------+-------+
+mysql> SHOW GRANTS FOR 'techonthenet'@'%';
 
-1 row in set (0.00 sec)
+mysql> SHOW GRANTS FOR 'techonthenet'@'localhost';
+
+mysql> GRANT ALL ON [DataBaseNane].* TO fooUser@'1.2.3.4' IDENTIFIED BY 'my_password';
+
+mysql> GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+
+mysql> GRANT type_of_permission ON database_name.table_name TO 'username'@'localhost';
+
+mysql> REVOKE type_of_permission ON database_name.table_name FROM 'username'@'localhost';
+
+mysql> SHOW GRANTS FOR 'username'@'localhost';
+
+mysql> REVOKE type_of_permission ON database_name.table_name FROM 'username'@'localhost';
+
+mysql> CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+
+mysql> DROP USER 'username'@'localhost';
+
+
+
+
+
+#### Following are  permissible Privileges for GRANT and REVOKE
+
+https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html
+
+https://www.web-technology-experts-notes.in/2014/11/Mysql-Privileges-Types-Of-Privileages-In-Mysql-How-Do-I-Grant-Privileges-In-Mysql.html
 
