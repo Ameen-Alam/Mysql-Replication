@@ -90,3 +90,38 @@ https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html
 
 https://www.web-technology-experts-notes.in/2014/11/Mysql-Privileges-Types-Of-Privileages-In-Mysql-How-Do-I-Grant-Privileges-In-Mysql.html
 
+
+
+
+
+
+
+
+
+
+
+
+--------------------------
+
+
+### Error
+
+Following are the error details:
+
+Error: Migration V810_27_01__DeleteDuplicateAcsUserIdProviderGuidRowsAddUniqueConstraint.sql failed
+SQL State: HY000
+Error Code: 1093
+Error Message: You can't specify target table 'users' for update in FROM clause
+Location: <Location where the installation is done>
+  
+  **To resolve this error, run the following commands in the MySQL Server:**
+
+1. Execute the following command before running the installer:
+
+```SET GLOBAL optimizer_switch = 'derived_merge=off';```
+
+2. Once the installation is done, set derived_merge ON using the following command:
+
+```SET GLOBAL optimizer_switch = 'derived_merge=on';```
+
+
