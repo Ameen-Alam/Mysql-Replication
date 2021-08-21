@@ -106,7 +106,11 @@ https://www.web-technology-experts-notes.in/2014/11/Mysql-Privileges-Types-Of-Pr
 
 ### Error
 
-Following are the error details:
+#### Unexpected ERROR 1093 of delete w/ subquery in from stmt
+
+https://bugs.mysql.com/bug.php?id=79286
+
+#### Following are the error details:
 
 Error: Migration V810_27_01__DeleteDuplicateAcsUserIdProviderGuidRowsAddUniqueConstraint.sql failed
 SQL State: HY000
