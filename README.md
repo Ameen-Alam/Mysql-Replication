@@ -45,6 +45,16 @@ and after
 
 ``` mysql> FLUSH PRIVILEGES;``` 
 
+#### Forgot password
+
+/etc/my.cnf
+[mysqld] 
+skip-grant-tables 
+systemctl restart mysql
+
+mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('admin123/?');
+
+remove skip-grant-tables 
 
 #### How to change max_connections
 
