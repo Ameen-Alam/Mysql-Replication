@@ -113,6 +113,18 @@ https://www.web-technology-experts-notes.in/2014/11/Mysql-Privileges-Types-Of-Pr
 
 --------------------------
 
+### Logs
+
+log-bin-Tbit.log
+log-bin-index=Tbit-log.index
+max-binlog-size=10M
+
+mysqlbinlog -v "C:\MySQL\ \Data\Tbit.000001"
+
+
+
+-----------------------
+
 
 ### Error
 
