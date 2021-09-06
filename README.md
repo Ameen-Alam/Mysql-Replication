@@ -1,6 +1,10 @@
 # Mysql-Replication
 Mysql-Replication Master-Master Master-Slave
 
+Check MYSQL version
+
+SHOW VARIABLES LIKE "%version%";
+
 
 ## MySQL FLUSH Commands.
 
