@@ -8,6 +8,17 @@ SHOW VARIABLES LIKE "%version%";
 
 ## MySQL FLUSH Commands.
 
+#### Installation RHEL
+
+- subscription-manager register --username username --password password --auto-attach
+- yum install https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+- yum repolist enabled | grep mysql
+- yum install mysql-community-server
+- service mysqld start
+- grep 'A temporary password' /var/log/mysqld.log |tail -1
+- /usr/bin/mysql_secure_installation
+- mysql -h localhost -u root -p
+
 
 #### Flush privileges
 
@@ -52,11 +63,18 @@ and after
 #### Forgot password
 
 /etc/my.cnf
+
 [mysqld] 
+
 skip-grant-tables 
+
 systemctl restart mysql
 
 mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('admin123/?');
+
+OR
+
+mysql> ALTER USER 'root'@'%' IDENTIFIED BY 'Infinity@123';
 
 remove skip-grant-tables 
 
