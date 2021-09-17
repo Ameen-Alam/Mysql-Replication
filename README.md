@@ -60,6 +60,24 @@ mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('admin123/?');
 
 remove skip-grant-tables 
 
+#### Check current user
+
+SELECT USER(), CURRENT_USER();
+
+
+#### Change MySQL Password Policy
+
+SHOW VARIABLES LIKE 'validate_password%';
+
+SET GLOBAL validate_password_policy=LOW;
+
+OR
+
+[mysqld]
+
+validate_password_policy=LOW
+
+
 #### How to change max_connections
 
 mysql> SET GLOBAL max_connections = 5000;
