@@ -120,6 +120,10 @@ mysql> GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 
 mysql> GRANT type_of_permission ON database_name.table_name TO 'username'@'localhost';
 
+Administrator Rights
+
+mysql> GRANT ALL ON *.* TO 'Infinity'@'%' WITH GRANT OPTION;
+
 mysql> REVOKE type_of_permission ON database_name.table_name FROM 'username'@'localhost';
 
 mysql> SHOW GRANTS FOR 'username'@'localhost';
