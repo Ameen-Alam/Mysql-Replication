@@ -74,6 +74,9 @@ mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('admin123/?');
 
 OR
 
+mysql> update mysql.user set authentication_string=password('MyNewPass') where user='root';
+
+OR
 mysql> ALTER USER 'root'@'%' IDENTIFIED BY 'Infinity@123';
 
 remove skip-grant-tables 
