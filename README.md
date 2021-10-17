@@ -198,3 +198,10 @@ Location: <Location where the installation is done>
 ```SET GLOBAL optimizer_switch = 'derived_merge=on';```
 
 
+
+  
+  ### Orcale DB
+  
+  
+1. #### [Oracle Database 19c Installation on Linux](https://medium.com/geekculture/oracle-database-19c-installation-on-linux-e184dde4ce03)
+  
