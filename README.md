@@ -198,7 +198,10 @@ Location: <Location where the installation is done>
 ```SET GLOBAL optimizer_switch = 'derived_merge=on';```
 
 
-
+  
+----------------------------------------------------
+  
+  
   
   ### Orcale DB
   
