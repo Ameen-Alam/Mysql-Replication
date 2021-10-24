@@ -207,4 +207,6 @@ Location: <Location where the installation is done>
   
   
 1. #### [Oracle Database 19c Installation on Linux](https://medium.com/geekculture/oracle-database-19c-installation-on-linux-e184dde4ce03)
+
+2. #### [Configure MySQL Group Replication on Ubuntu 20.04](https://www.vultr.com/docs/configure-mysql-group-replication-on-ubuntu-20-04)
   
