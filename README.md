@@ -200,7 +200,33 @@ Location: <Location where the installation is done>
 
   
 ----------------------------------------------------
-  
+#### Docker MySQL Server
+
+Run container in daemon mode & fetch the password from logs Check the below command to run the container
+
+docker run -d --name=mysql mysql/mysql-server:latest
+
+and then run the below command to fetch the password
+
+docker logs mysql 2>&1 | grep GENERATED
+
+Output of above command is:
+
+[Entrypoint] GENERATED ROOT PASSWORD: PopiKQIjAS#OGj3x]yJOBLEn80p
+
+Once you have the password by one of the above-mentioned methods, you can then login with the below command using that password
+
+docker exec -it mysql mysql -uroot -p
+
+When asked, enter the generated root password (see the instructions above on how to find it). Because the MYSQL_ONETIME_PASSWORD option is true by default, after you have connected a mysql client to the server, you must reset the server root password by issuing this statement:
+
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+
+mysql> CREATE USER 'admin'@'%' IDENTIFIED BY 'Admin@123';
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';
+
+----------------------------------------------------
   
   
   ### Orcale DB
